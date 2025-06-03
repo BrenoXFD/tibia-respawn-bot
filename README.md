@@ -97,11 +97,12 @@ The database is in mongodb, an alternative is to use mongo atlas.
 
 
 📸 Example Screenshots
-![Image](https://github.com/user-attachments/assets/9c2d0bb2-8fc8-44b6-8d6c-0bd128085740)
 
-![Image](https://github.com/user-attachments/assets/a0fe3c23-fa39-4628-8a64-0194ab11d479)
+* ![Image](https://github.com/user-attachments/assets/9c2d0bb2-8fc8-44b6-8d6c-0bd128085740)
 
-![Image](https://github.com/user-attachments/assets/df86a2ba-e268-414d-888e-270860209039)
+* ![Image](https://github.com/user-attachments/assets/a0fe3c23-fa39-4628-8a64-0194ab11d479)
+
+* ![Image](https://github.com/user-attachments/assets/df86a2ba-e268-414d-888e-270860209039)
 
 
 📝 License
