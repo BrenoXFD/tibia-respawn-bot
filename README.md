@@ -67,11 +67,11 @@ TIBIA_WORLD=YourTibiaWorld
 ### 2. Required Discord Bot Permissions
 Make sure your bot has the following permissions in your server:
 
-*Manage Messages
-*Send Messages
-*Read Message History
-*Send Direct Messages
-*Use Slash Commands
+* Manage Messages
+* Send Messages
+* Read Message History
+* Send Direct Messages
+* Use Slash Commands
 
 ### 3. Install dependencies
 ```bash
