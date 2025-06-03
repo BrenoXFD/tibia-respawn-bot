@@ -1,6 +1,6 @@
 # Respawn Claim Bot
 
-A Discord bot to manage respawn queues for Tibia players. Players can register characters, claim caves, join queues, and receive automated notifications when it’s their turn — all through slash commands.
+A Discord bot to manage respawn queues for Tibia players using Discord.js and Tibiadata.com. Players can register characters, claim caves, join queues, and receive automated notifications when it’s their turn — all through slash commands.
 
 ---
 
@@ -89,19 +89,20 @@ node index.js
 ```
 
 
-🛠 Additional Tools
-Script	Purpose
-scripts/exportRespawns.js	Export caves from your DB to JSON
-scripts/importRespawns.js	Import caves from JSON to your DB
-jobs/syncRespawnStatus.js	Auto-update message with active caves
+### 🛠 Additional
+```
+There is a database file with default caves in data/respawns.json if you want to import it.
+The database is in mongodb, an alternative is to use mongo atlas.
+```
 
 
-📸 Example Screenshots (coming soon)
-Queue status message in Discord
+📸 Example Screenshots
+![Image](https://github.com/user-attachments/assets/9c2d0bb2-8fc8-44b6-8d6c-0bd128085740)
 
-DM notification with Accept button
+![Image](https://github.com/user-attachments/assets/a0fe3c23-fa39-4628-8a64-0194ab11d479)
 
-Auto-generated cave list image
+![Image](https://github.com/user-attachments/assets/df86a2ba-e268-414d-888e-270860209039)
+
 
 📝 License
 MIT © 2025 BrenoXFD
