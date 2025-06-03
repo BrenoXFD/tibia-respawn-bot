@@ -79,29 +79,26 @@ Use Slash Commands
 
 ### 3. Install dependencies
 ```bash
-Copiar
-Editar
 npm install
 ```
 
 ### 4. Deploy slash commands
 ```bash
-Copiar
-Editar
 node deploy-commands.js
 ```
 
 ### 5. Start the bot
 ```bash
-Copiar
-Editar
 node index.js
+```
+
+
 🛠 Additional Tools
 Script	Purpose
 scripts/exportRespawns.js	Export caves from your DB to JSON
 scripts/importRespawns.js	Import caves from JSON to your DB
 jobs/syncRespawnStatus.js	Auto-update message with active caves
-```
+
 
 📸 Example Screenshots (coming soon)
 Queue status message in Discord
