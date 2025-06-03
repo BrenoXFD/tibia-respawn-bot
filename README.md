@@ -58,8 +58,8 @@ MONGODB_URI=your-mongodb-uri
 STATUS_CHANNEL_ID=channel-id-to-post-cave-status
 ROLE_USER=Claim Bot
 ROLE_ADMIN=Bot Admin
-TIBIA_WORLD=Yovera```
-
+TIBIA_WORLD=Yovera
+```
 
 2. Required Discord Bot Permissions
 Make sure your bot has the following permissions in your server:
