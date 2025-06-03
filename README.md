@@ -96,7 +96,7 @@ The database is in mongodb, an alternative is to use mongo atlas.
 ```
 
 
-📸 Example Screenshots
+### 📸 Example Screenshots
 
 * ![Image](https://github.com/user-attachments/assets/9c2d0bb2-8fc8-44b6-8d6c-0bd128085740)
 
@@ -105,5 +105,6 @@ The database is in mongodb, an alternative is to use mongo atlas.
 * ![Image](https://github.com/user-attachments/assets/df86a2ba-e268-414d-888e-270860209039)
 
 
-📝 License
+### 📝 License
+
 MIT © 2025 BrenoXFD
