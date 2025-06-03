@@ -41,6 +41,9 @@ A Discord bot to manage respawn queues for Tibia players. Players can register c
 | `/respawn-manage kick @user`           | Kick a user from the queue and call the next one              |
 | `/respawn-manage bump-user @user <code>` | Force a user to become the current in a cave                |
 | `/respawn-block @user <duration>`      | Temporarily block a user from using the bot                  |
+| `/respawn-admin-create <code> <name>`  | Creates a new cave                                            |
+| `/respawn-admin-delete <code>`         | Deletes a cave by its code                                    |
+| `/respawn-admin-edit <code>+2`         | Edits the name or code of a cave                              |
 
 ---
 
