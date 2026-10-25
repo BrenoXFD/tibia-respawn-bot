@@ -26,11 +26,10 @@ export default {
     const code = crypto.randomInt(100000, 999999).toString();
 
     let nameFromTibia;
+    const world = process.env.TIBIA_WORLD;
     try {
-      const response = await axios.get(`https://api.tibiadata.com/v4/character/${encodeURIComponent(rawName)}`);
+      const response = await axios.get(`https://api.tibiadata.com/v5/character/${encodeURIComponent(rawName)}`);
       const info = response.data?.character?.character;
-
-      const world = process.env.TIBIA_WORLD;
 
       if (!info || !info.name || info.world !== world) {
         return interaction.editReply({
@@ -40,6 +39,12 @@ export default {
 
       nameFromTibia = info.name;
     } catch (err) {
+      if (axios.isAxiosError(err) && err.response?.status === 404) {
+        return interaction.editReply({
+          content: `❌ Character **${rawName}** does not exist or is not on the world **${world}**.`
+        });
+      }
+
       console.error('❌ Error validating character from API:', err);
       return interaction.editReply({
         content: '❌ Failed to validate character. Please try again later.'
@@ -92,7 +97,7 @@ export default {
           await i.deferUpdate();
 
           const response = await axios.get(
-            `https://api.tibiadata.com/v4/character/${encodeURIComponent(nick)}`
+            `https://api.tibiadata.com/v5/character/${encodeURIComponent(nick)}`
           );
           const info = response.data?.character?.character;
 
@@ -119,6 +124,14 @@ export default {
             });
           }
         } catch (error) {
+          if (axios.isAxiosError(error) && error.response?.status === 404) {
+            await interaction.editReply({
+              content: `❌ Character **${nick}** was not found by TibiaData. Please try again after checking the character name.`,
+              components: i.message.components
+            });
+            return;
+          }
+
           console.error('❌ Error validating confirmation via TibiaData:', error);
           await interaction.editReply({
             content: '❌ Failed to validate character. Please try again later.',
