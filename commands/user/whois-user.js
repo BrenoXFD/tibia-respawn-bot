@@ -25,14 +25,21 @@ export default {
     }
 
     let onlineNames = [];
+    const world = process.env.TIBIA_WORLD;
     try {
-      const world = process.env.TIBIA_WORLD;
-      const { data } = await axios.get(`https://api.tibiadata.com/v4/world/${world}`);
+      const { data } = await axios.get(`https://api.tibiadata.com/v5/world/${world}`);
       const onlinePlayers = data.world.online_players;
       if (Array.isArray(onlinePlayers)) {
         onlineNames = onlinePlayers.map(p => p.name.toLowerCase());
       }
     } catch (err) {
+      if (axios.isAxiosError(err) && err.response?.status === 404) {
+        console.error(`❌ TibiaData world not found: ${world}`);
+        return interaction.editReply({
+          content: '❌ The configured Tibia world could not be found. Please contact an administrator.'
+        });
+      }
+
       console.error('❌ TibiaData API error:', err);
       return interaction.editReply({
         content: '❌ Failed to check online characters. Please try again later.'
